@@ -11,10 +11,12 @@ jobs:
       - name: print env
         run: |
           echo "project: $project"
-          echo "component: $context"
-      - name: print sec
+          echo "component: $component"
+      - name: print secrets
         run: |
-          echo " DB_USER: ${{ secret.DB_USER }}
-          echo "DB_PASSWORD ${{ secret.DB_PASSWORD }}"
-
+          echo " DB_USER: ${{ secrets.DB_USER }}
+          echo "DB_PASSWORD:  ${{ secret.DB_PASSWORD }}"
+      - name:
+        run: |
+          echo "DB_URL: ${{ vars.DB_URL }}"
       
