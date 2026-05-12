@@ -1,0 +1,20 @@
+name: environments
+on: [push]
+env:
+  project: "roboshop"
+  component: "catalogue"
+
+jobs:
+  github-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print env
+        run: |
+          echo "project: $project"
+          echo "component: $context"
+      - name: print sec
+        run: |
+          echo " DB_USER: ${{ secret.DB_USER }}
+          echo "DB_PASSWORD ${{ secret.DB_PASSWORD }}"
+
+      
