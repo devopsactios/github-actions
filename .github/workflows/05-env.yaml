@@ -31,3 +31,13 @@ jobs:
         run: | 
           echo "image_name: ${{ steps.step1.outputs.image_name }}"
           echo "image_version: ${{ steps.step1.outputs.image_version }}"
+
+      - nam: using githubenv
+        run: |
+          echo "course=devops" >> $GITHUB_ENV
+          echo "duration=2hrs" >> $GITHUB_ENV
+        
+      - name: access using GITHUB_ENV
+        run: |
+          echo "course: $course"
+          echo "duration: $duration"
