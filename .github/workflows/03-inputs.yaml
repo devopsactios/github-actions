@@ -19,3 +19,4 @@ jobs:
     steps:
       - name: print inputs
         run: echo "Log level: ${{ inputs.loglevel }}"
+     
