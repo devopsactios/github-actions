@@ -1,0 +1,21 @@
+name: inputs-demo
+on:
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        description: 'Log level'
+        required: true
+        defualt: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print inputs
+        run: echo "Log level: "${{ inputs.loglevel }}"
