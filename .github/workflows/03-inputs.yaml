@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'
+        description: 'Loglevel'
         required: true
         default: 'warning'
         type: choice
@@ -11,6 +11,10 @@ on:
         - info
         - warning
         - debug
+      tags:
+        description: "test"
+        required: false
+        type: boolean
 
 
 jobs:
