@@ -20,4 +20,14 @@ jobs:
       - name: print vars 
         run: |
           echo "DB_URL: ${{ vars.DB_URL }}"
-    
+
+      - name: image and version
+        id: step1
+        run: |
+          echo "image_name=nginx" >> $GITHUB_OUTPUT
+          echo "image_version=1.0.0" >> $GITHUB_OUTPUT
+        
+      - name: print outputs
+        run: | 
+          echo "image_name: ${{ steps.step1.outputs.image_name }}"
+          echo "image_version: ${{ steps.step1.outputs.image_version }}"
