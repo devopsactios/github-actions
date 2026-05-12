@@ -52,7 +52,7 @@ jobs:
     steps:
       - name:  print github env in another job
         run: |
-          echo "image_name: ${{ needs.githubenv.image_name }}"
-          echo "image_name: ${{ needs.githubenv.image_version }}"
+          echo "image_name: ${{ needs.githubenv.outputs.image_name }}"
+          echo "image_version: ${{ needs.githubenv.outputs.image_version }}"
 
 
