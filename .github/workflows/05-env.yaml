@@ -48,7 +48,7 @@ jobs:
 
   deploy:
     needs: github-env
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name:  print github env in another job
         run: |
