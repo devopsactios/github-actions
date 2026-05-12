@@ -2,7 +2,7 @@ name: inputs-demo
 on:
   workflow_dispatch:
     inputs:
-      loglevel:
+      logLevel:
         description: 'Log level'
         required: true
         default: 'warning'
@@ -18,5 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print inputs
-        run: echo "Log level: ${{ inputs.loglevel }}"
+        run: |
+          echo "Log level: ${{ inputs.logLevel }}"
      
