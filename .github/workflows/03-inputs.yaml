@@ -24,4 +24,5 @@ jobs:
       - name: print inputs
         run: |
           echo "Log level: ${{ inputs.logLevel }}"
+          echo "tags: ${{ inputs.tags }}"
      
