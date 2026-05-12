@@ -14,7 +14,7 @@ jobs:
           echo "component: $context"
       - name: print sec
         run: |
-          echo " DB_USER: ${{ secret.DB_USER }}
-          echo "DB_PASSWORD ${{ secret.DB_PASSWORD }}"
+          echo " DB_USER: ${{ secrets.DB_USER }}
+          echo "DB_PASSWORD ${{ secrets.DB_PASSWORD }}"
 
       
