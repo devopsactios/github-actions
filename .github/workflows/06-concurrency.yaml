@@ -8,7 +8,7 @@ concurrency:
 
 jobs:
   concurrency:
-    runs-on: ubuntu-latest'
+    runs-on: ubuntu-latest
     steps:
     - name: greet hello-world
       run: sleep 60
