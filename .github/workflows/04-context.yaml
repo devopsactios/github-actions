@@ -12,3 +12,6 @@ jobs:
           echo "branch name: ${{ github.actor }}"
       - name: print job status
         run: echo "${{ toJson(job)}}"
+        
+      - name: print job status
+        run: echo "${{ toJson(runner)}}"
