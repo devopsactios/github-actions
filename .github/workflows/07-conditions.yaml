@@ -12,3 +12,6 @@ jobs:
       - name: deploy in dev
         if: github.ref_name == 'feature'
         run: echo "This one executes if branch is main"
+
+      - name: print job status
+        run: echo ${{ toJson(job) }}
