@@ -1,0 +1,14 @@
+name: conditions_demo
+on: [push]
+
+jobs:
+  condition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy prod
+        if: github.ref_name == 'main'
+        run: echo "This one executes if branch is main"
+
+      - name: deploy in dev
+        if: github.ref_name == 'feature'
+        run: echo "This one executes if branch is main"
