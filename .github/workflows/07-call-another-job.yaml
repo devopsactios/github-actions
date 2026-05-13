@@ -6,6 +6,6 @@ jobs:
     uses: devopsactios/workflows/.github/workflows/nodejs-feature-pipeline.yaml@main
     with:
       project: 'roboshop'
-      component: 'catalogue'
+      components: 'catalogue'
       environment: 'dev' 
     
