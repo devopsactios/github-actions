@@ -14,4 +14,4 @@ jobs:
         run: echo "This one executes if branch is main"
 
       - name: print job status
-        run: echo ${{ toJson(job) }}
+        run: echo "${{ toJson(job) }}"
